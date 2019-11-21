@@ -16,43 +16,8 @@
   <header id="home-page-header">
     <div class="ui container">
       <h1>{{ site.title }}</h1>
-      <p class="header-tagline">{{ site.tagline }}</p>
+      <p class="header-tagline">Meemi is under maintenance. Please visit back soon !</p>
     </div>
   </header>
-    
-  <div class="ui container">
-  
-    <section id="fish-listing">
-      <div class="ui five flat cards">
-        {% for fish in site.categories.fishes %} 
-        <div class="card">
-          <div class="image">
-            <img src="./public/posts/{{ fish.thumbnail }}">
-          </div>
-          <div class="content">
-            <a class="header">{{ fish.title }}</a>
-            <div class="meta">
-              <span class="date">{{ fish.type }}</span>
-            </div>
-            <div class="description">
-              {{ fish.description }}
-            </div>
-          </div>
-          <div class="extra content">
-            <a>
-              <i class="map marker alternate icon"></i>
-              {{ fish.store.place }}
-            </a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section id="store-listing">
-      
-    </section>
-
-  </div>
 </body>
 </html>
