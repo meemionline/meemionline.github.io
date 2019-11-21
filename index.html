@@ -1,0 +1,58 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site.title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="./assets/css/semantic-ui-masonry.min.css">
+  <link rel="stylesheet" href="./assets/css/semantic-ui-flat.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header id="home-page-header">
+    <div class="ui container">
+      <h1>{{ site.title }}</h1>
+      <p class="header-tagline">{{ site.tagline }}</p>
+    </div>
+  </header>
+    
+  <div class="ui container">
+  
+    <section id="fish-listing">
+      <div class="ui five flat cards">
+        {% for fish in site.categories.fishes %} 
+        <div class="card">
+          <div class="image">
+            <img src="./public/posts/{{ fish.thumbnail }}">
+          </div>
+          <div class="content">
+            <a class="header">{{ fish.title }}</a>
+            <div class="meta">
+              <span class="date">{{ fish.type }}</span>
+            </div>
+            <div class="description">
+              {{ fish.description }}
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="map marker alternate icon"></i>
+              {{ fish.store.place }}
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="store-listing">
+      
+    </section>
+
+  </div>
+</body>
+</html>
