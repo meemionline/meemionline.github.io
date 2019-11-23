@@ -1,9 +1,11 @@
-header#home-page-header{
+body{
   background: url('https://i.imgur.com/CVHUSeJ.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: skyblue;
+}
+header#home-page-header{
   padding: 200px 0px;
   color: white;
 }
