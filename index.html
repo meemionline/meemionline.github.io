@@ -3,18 +3,76 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - {{ site.title }}</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Roboto", sans-serif;
+        background-color: #333;
+      }
 
-</head>
-<body>
-  <header class="container">
-    <div class="box">
-      <h1>{{ site.title }}</h1>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .box {
+        text-align: center;
+      }
+
+      .logo {
+        height: 10em;
+        position: relative;
+        bottom: -14px;
+      }
+
+      .description {
+        margin-top: 0.5em;
+        color: #888;
+        font-size: 1.2em;
+        font-weight: 300;
+        text-transform: capitalize;
+      }
+
+      .header h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 2em;
+      }
+
+      .color-1 {
+        color: #ffcc55;
+      }
+
+      .color-2 {
+        color: #ff7733;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="header">
+          <img class="logo" alt="Meemi Logo" src="assets/images/meemi-logo.png" />
+          <h1 class="color-2">Meemi</h1>
+          <div class="details">
+            <p class="description color-1">Lets swim with them</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
-</body>
+  </body>
 </html>
